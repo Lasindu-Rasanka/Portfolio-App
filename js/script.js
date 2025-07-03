@@ -1,49 +1,26 @@
-// 1. Smooth scroll for nav links
-document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.querySelector('.nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
     e.preventDefault();
-    const section = document.querySelector(this.getAttribute('href'));
-    section.scrollIntoView({ behavior: 'smooth' });
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      nav.classList.remove('active'); // Close menu on mobile after clicking
+    }
   });
 });
 
-// 2. Scroll reveal animation
-const faders = document.querySelectorAll('.service-card, .testimonial');
-
-const appearOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px"
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('fade-in');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
-
-// 3. Highlight active nav on scroll
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav a");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 60) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active");
-    }
-  });
+// Dark Mode Toggle (press "D" key)
+document.addEventListener('keydown', e => {
+  if (e.key.toLowerCase() === 'd') {
+    document.body.classList.toggle('dark-mode');
+  }
 });
