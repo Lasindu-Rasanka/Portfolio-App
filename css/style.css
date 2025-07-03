@@ -435,45 +435,53 @@ section {
   color: var(--dark);
 }
 
-.certifications, .reference {
-  margin-top: 3rem;
-}
-
-.certifications h3, .reference h3 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.certifications ul {
-  list-style-position: inside;
-  margin-bottom: 1.5rem;
-}
-
-.certifications li {
-  margin-bottom: 0.5rem;
-}
-
+/* Social Links - Modern Style */
 .social-links {
   display: flex;
+  gap: 15px;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 30px;
 }
 
 .social-button {
-  display: inline-block;
-  padding: 0.75rem 2rem;
-  background-color: var(--primary);
-  color: white;
-  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 50px;
   font-weight: 600;
-  transition: var(--transition);
-  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.social-button i {
+  font-size: 18px;
+}
+
+.social-button span {
+  font-size: 15px;
+}
+
+.social-button:nth-child(1) {
+  background: #0077b5; /* LinkedIn blue */
+}
+
+.social-button:nth-child(2) {
+  background: #333; /* GitHub black */
+}
+
+.social-button:nth-child(3) {
+  background: #1877f2; /* Facebook blue */
 }
 
 .social-button:hover {
-  background-color: var(--primary-dark);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.social-button:active {
+  transform: translateY(0);
 }
 
 /* Footer */
