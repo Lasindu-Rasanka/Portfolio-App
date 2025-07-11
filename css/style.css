@@ -569,3 +569,128 @@ section {
     font-size: 1.1rem;
   }
 }
+
+/* Chatbot Widget */
+.chatbot-widget {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.chatbot-toggle {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.chatbot-toggle:hover {
+  background: #1a6fd8;
+  transform: translateY(-2px);
+}
+
+.chatbot-container {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  width: 320px;
+  height: 400px;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatbot-container.active {
+  display: flex;
+}
+
+.chatbot-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: var(--primary-color);
+  color: white;
+  border-bottom-right-radius: 0.2rem;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background: #f1f1f1;
+  border-bottom-left-radius: 0.2rem;
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 0.8rem;
+  border-top: 1px solid #eee;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: none;
+}
+
+.chatbot-send {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .chatbot-widget {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+  .chatbot-container {
+    width: 280px;
+    height: 350px;
+  }
+}
