@@ -1,198 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lasindu Rasanka | IT Undergraduate & Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lasindu Rasanka | Cloud &amp; DevOps Engineer</title>
+<meta name="description" content="Final-year IT undergraduate at SLIIT building towards Cloud Engineer and DevOps Engineer roles. AWS, networking, and hands-on IT operations experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header class="top">
+  <a class="brand" href="#top">Lasindu Rasanka</a>
+  <nav aria-label="Main">
+    <a href="#work">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    <a class="btn small" href="assets/cv/Lasindu_Rasanka_CV16.pdf" download>Download CV</a>
+  </nav>
+</header>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">Lasindu</div>
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
+<main id="top">
+<section class="hero wrap">
+  <div class="intro">
+    <img class="photo" src="assets/img/profile.jpeg" alt="Lasindu Rasanka" width="96" height="96" onerror="this.style.display='none'">
+    <h1>I build and run cloud infrastructure on AWS.</h1>
+    <p class="lead">Final-year BSc (Hons) IT undergraduate at SLIIT, aiming for Cloud Engineer and DevOps Engineer roles. I spent six months running real IT operations at Citypak by Advantis, and I design AWS environments with VPCs, EC2, S3 and CloudFormation.</p>
+    <div class="actions">
+      <a class="btn" href="assets/cv/Lasindu_Rasanka_CV16.pdf" download>Download CV</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
     </div>
-  </header>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Hello, I'm <span>Lasindu Rasanka</span></h1>
-      <h2>IT Undergraduate | Full-Stack Developer</h2>
-      <p>Strongly self-driven and fast-learning IT undergraduate specializing in Information Technology with expertise in MERN Stack, DevOps, and cloud technologies.</p>
-      <div class="hero-links">
-        <a href="https://www.linkedin.com/in/lasindu-rasanka" target="_blank" class="social-link">LinkedIn</a>
-        <a href="https://github.com/Lasindu-Rasanka" target="_blank" class="social-link">GitHub</a>
-        <a href="#contact" class="cta-button">Contact Me</a>
-        <a href="assets/cv/Lasindu_Rasanka.pdf" target="_blank" download class="cta-button">Download CV</a>
-      </div>
-    </div>
-  </section>
+  <figure class="diagram" aria-label="Interactive diagram of my AWS coursework architecture">
+    <svg viewBox="0 0 520 380" role="group">
+      <g class="node" tabindex="0" data-k="cfn">
+        <rect x="10" y="10" width="500" height="40" rx="4"/><text x="260" y="35" text-anchor="middle">CloudFormation template</text>
+      </g>
+      <g class="node vpc" tabindex="0" data-k="vpc">
+        <rect x="10" y="70" width="340" height="300" rx="6"/><text x="24" y="92">VPC</text>
+      </g>
+      <g class="node" tabindex="0" data-k="pub">
+        <rect x="30" y="110" width="300" height="110" rx="4"/><text x="44" y="132">Public subnet</text>
+        <rect class="res" x="44" y="146" width="120" height="56" rx="3"/><text x="104" y="179" text-anchor="middle">EC2 web</text>
+      </g>
+      <g class="node" tabindex="0" data-k="priv">
+        <rect x="30" y="245" width="300" height="110" rx="4"/><text x="44" y="267">Private subnet</text>
+        <rect class="res" x="44" y="281" width="120" height="56" rx="3"/><text x="104" y="314" text-anchor="middle">EC2 app</text>
+      </g>
+      <g class="node" tabindex="0" data-k="s3">
+        <rect class="res" x="390" y="150" width="120" height="100" rx="4"/><text x="450" y="196" text-anchor="middle">S3 bucket</text><text x="450" y="216" text-anchor="middle" class="sub">encrypted</text>
+      </g>
+      <path class="flow" d="M164 174 H390 M104 202 V281"/>
+    </svg>
+    <figcaption id="cap">Select a part of the diagram. This is the environment I designed for my Cloud Computing coursework.</figcaption>
+  </figure>
+</section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="about-content">
-      <h2>About Me</h2>
-      <p>I'm a third-year BSc (Hons) in Information Technology undergraduate at Sri Lanka Institute of Information Technology (SLIIT), expected to graduate in December 2026.</p>
-      <p>I have a solid foundation in full-stack development, DevOps practices, version control, and basic systems and network concepts. Recognized for being adaptive, analytical, and an active problem-solver with strong communication and project coordination skills.</p>
-      
-      <div class="education">
-        <h3>Education</h3>
-        <div class="education-item">
-          <h4>BSc (Hons) in Information Technology</h4>
-          <p>Sri Lanka Institute of Information Technology (SLIIT)</p>
-          <p>Third Year Undergraduate | Expected Graduation: December 2026</p>
-        </div>
-      </div>
+<section id="work" class="wrap">
+  <h2>Experience</h2>
+  <article class="job">
+    <div class="when">Oct 2025 – Apr 2026</div>
+    <div>
+      <h3>IT System Support Intern, Citypak by Advantis</h3>
+      <p>Colombo 02. I supported day-to-day IT infrastructure for a delivery operation.</p>
+      <ul>
+        <li>Managed user accounts, access permissions and security settings in Active Directory and the Citypak Falcon platform.</li>
+        <li>Diagnosed and fixed system, hardware, software and access issues for employees and merchants.</li>
+        <li>Installed, configured and maintained endpoint devices, and kept IT asset records up to date.</li>
+      </ul>
     </div>
-  </section>
+  </article>
+</section>
 
-  <!-- Skills Section -->
-  <section class="skills" id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3>Frontend</h3>
-        <ul>
-          <li>React</li>
-          <li>HTML/CSS</li>
-          <li>JavaScript</li>
-          <li>Android Studio</li>
-          <li>Kotlin</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Backend</h3>
-        <ul>
-          <li>Node.js</li>
-          <li>Express.js</li>
-          <li>Spring Boot</li>
-          <li>Python</li>
-          <li>Flask</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Database & DevOps</h3>
-        <ul>
-          <li>MongoDB</li>
-          <li>MySQL</li>
-          <li>Docker</li>
-          <li>AWS</li>
-          <li>Git</li>
-          <li>Linux</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="soft-skills">
-      <h3>Soft Skills & Interests</h3>
-      <div class="soft-skills-grid">
-        <div class="soft-skill-item">Agile & DevOps mindset</div>
-        <div class="soft-skill-item">Clear technical communication</div>
-        <div class="soft-skill-item">Analytical problem-solving</div>
-        <div class="soft-skill-item">UI/UX and responsive design</div>
-        <div class="soft-skill-item">Fast learner of new tech</div>
-        <div class="soft-skill-item">Cloud & AI enthusiast</div>
-      </div>
-    </div>
-  </section>
+<section id="projects" class="wrap">
+  <h2>Projects</h2>
+  <div class="plist">
+    <article class="proj lead-proj">
+      <h3>AWS cloud infrastructure deployment</h3>
+      <p>Cloud Computing coursework, SLIIT. A VPC with public and private subnets, EC2 instances, and an S3 bucket with server-side encryption and public access blocked. Infrastructure is defined with CloudFormation.</p>
+      <p class="tags">Amazon VPC, EC2, S3, CloudFormation</p>
+    </article>
+    <article class="proj">
+      <h3>Caregiver support for vascular dementia</h3>
+      <p>Final-year group research. A web app giving caregivers personalized guidance and activity tracking, backed by ML models.</p>
+      <p class="tags">FastAPI, React, Redis, scikit-learn, CatBoost</p>
+    </article>
+    <article class="proj">
+      <h3>Smart Academic Scheduler</h3>
+      <p>Group project that builds timetables and optimizes study routines.</p>
+      <p class="tags">MongoDB, Express, React, Node.js</p>
+    </article>
+    <article class="proj">
+      <h3>Skill Sharing Platform</h3>
+      <p>Connects learners with mentors.</p>
+      <p class="tags">React.js, Spring Boot</p>
+    </article>
+  </div>
+</section>
 
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <h2>Key Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>AI-Powered Portfolio Web Application</h3>
-        <p>Developed an AI-powered portfolio web application to showcase projects and skills interactively using Python, Flask, HTML, CSS, and JavaScript.</p>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>Flask</span>
-          <span>AI</span>
-        </div>
-        <p class="project-type">Individual Project</p>
-      </div>
-      
-      <div class="project-card">
-        <h3>Handmade Goods E-Commerce Web App</h3>
-        <p>Full-stack application for browsing and purchasing handmade items built with MongoDB, Express.js, React, and Node.js (MERN Stack).</p>
-        <div class="project-tags">
-          <span>MERN Stack</span>
-          <span>Full-stack</span>
-          <span>E-commerce</span>
-        </div>
-        <p class="project-type">Group Project</p>
-      </div>
-      
-      <div class="project-card">
-        <h3>Smart Academic Scheduler</h3>
-        <p>Developed to automate timetable planning and optimize study routines using MERN Stack and TensorFlow.</p>
-        <div class="project-tags">
-          <span>MERN Stack</span>
-          <span>TensorFlow</span>
-          <span>Automation</span>
-        </div>
-        <p class="project-type">Group Project</p>
-      </div>
-      
-      <div class="project-card">
-        <h3>To-Do App (Android)</h3>
-        <p>Android application with task management and reminder features built with Kotlin and Android Studio.</p>
-        <div class="project-tags">
-          <span>Kotlin</span>
-          <span>Android</span>
-          <span>Mobile</span>
-        </div>
-        <p class="project-type">Individual Project</p>
-      </div>
-      
-      <div class="project-card">
-        <h3>Skill Sharing Platform</h3>
-        <p>Platform connecting learners with skill mentors built using React, Spring Boot, and MongoDB.</p>
-        <div class="project-tags">
-          <span>React</span>
-          <span>Spring Boot</span>
-          <span>MongoDB</span>
-        </div>
-        <p class="project-type">Group Project</p>
-      </div>
-    </div>
-  </section>
+<section id="skills" class="wrap">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Cloud (AWS)</dt><dd>EC2, S3, VPC, IAM, RDS, DynamoDB, CloudFormation, cloud security fundamentals, IaaS/PaaS/SaaS and deployment models</dd>
+    <dt>Networking</dt><dd>DNS, DHCP, VLANs, IP subnetting, troubleshooting, Cisco Packet Tracer</dd>
+    <dt>Systems</dt><dd>Active Directory, user and access management, endpoint support, IT asset management</dd>
+    <dt>Development</dt><dd>Python, JavaScript, Node.js, Express.js, Spring Boot, PHP, React.js, REST APIs, MongoDB, MySQL</dd>
+  </dl>
+  <h3 class="sub">Certifications and courses</h3>
+  <ul class="certs">
+    <li>AWS Academy Graduate, Cloud Foundations</li>
+    <li>AWS SimuLearn: Cloud Computing Essentials, Core Security Concepts, Databases in Practice, First NoSQL Database, Highly Available Web Applications, Cloud Economics</li>
+    <li>Introduction to Cybersecurity, Cisco Networking Academy</li>
+    <li>Getting Started with Cisco Packet Tracer, Cisco Networking Academy</li>
+  </ul>
+</section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Get In Touch</h2>
-    <div class="contact-info">
-      <p><strong>Location:</strong> Malabe, Sri Lanka</p>
-      <p><strong>Phone:</strong> +94 740 551 961</p>
-      <p><strong>Email:</strong> lasindu5909@gmail.com</p>
-      <p><strong>Languages:</strong> English, Sinhala</p>
-    </div>
-    
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/lasindu-rasanka" target="_blank" class="social-button">LinkedIn</a>
-      <a href="https://github.com/Lasindu-Rasanka" target="_blank" class="social-button">GitHub</a>
-      <a href="https://www.facebook.com/lasindu.rasanka" target="_blank" class="social-button">Facebook</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 Lasindu Rasanka | IT Undergraduate, SLIIT | Malabe, Sri Lanka</p>
-    <p>Passionate about designing effective, technology-driven, user-focused solutions</p>
-  </footer>
-
-  <script src="js/script.js"></script>
+<section id="contact" class="wrap">
+  <h2>Contact</h2>
+  <p class="lead">I'm open to Cloud Engineer and DevOps Engineer roles. Email is the fastest way to reach me.</p>
+  <p class="links">
+    <a href="mailto:lasindu5909@gmail.com">lasindu5909@gmail.com</a>
+    <a href="tel:+94740551961">074 055 1961</a>
+    <a href="https://www.linkedin.com/in/lasindu-rasanka" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/lasindu5909" target="_blank" rel="noopener">GitHub</a>
+  </p>
+</section>
+</main>
+<footer class="wrap foot">© <span id="yr"></span> Lasindu Rasanka. Malabe, Sri Lanka.</footer>
+<script src="js/script.js"></script>
 </body>
 </html>
